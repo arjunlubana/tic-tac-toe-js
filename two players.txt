@@ -1,0 +1,24 @@
+TIC TAC TOE.
+
+    HOW GAME IS PLAYED
+
+- Player 1 onclick, change the box to x then switch to player 2
+- Check game for a winner;
+- Player 2 on click change the box to o the switch to player 1
+- Check game for a winner
+
+    HOW TO CHECK THE WINNER.
+
+-Use a 3 x 3 array  to check for a line crossed.
+- On click change the an array value to 1 or 0;
+- get the boxId and Player value and 
+
+    HOW TO SWITCH BTN PLAYERS
+
+-use flags to make player one false or true.
+
+    HOW TO REGISTER A CLICK AND DRAW THE HTML ELEMENT.
+
+- Register using JS events and lock the value of the item in array.
+
+    REMOVE ONCLICK EVENT ON ELEMENT CLICKED.
