@@ -55,31 +55,46 @@ function gamePlay(boxId){
 
 function win(){
     //Horizontal
-    for (let line of gameBoard){
-        if (line[0] && line[1] && line[2]){
-            console.log("player1 wins");
-        }else if ((line[0] == 0) && (line[1] == 0) && (line[2] == 0)){
-            console.log("player2 wins");
-        }
-    }
-
     for (let i = 0; i<3;i++){
-        //vertical
-        if (gameBoard[0][i] && gameBoard[1][i] && gameBoard[2][i]){
-            console.log("player1 wins");
+        if (gameBoard[i][0] && gameBoard[i][1] && gameBoard[i][2]){
+            clearBoard();
+            //console.log("win");
+        }else if ((gameBoard[i][0] == 0) && (gameBoard[i][1] == 0) && (gameBoard[i][2] == 0)){
+            clearBoard();
+            console.log("win2");
+        }else if (gameBoard[0][i] && gameBoard[1][i] && gameBoard[2][i]){
+            clearBoard();
+            //console.log("win");
         }else if ((gameBoard[0][i] == 0) && (gameBoard[1][i] == 0) && (gameBoard[2][i] == 0)){
-            console.log("player2 wins");
+            clearBoard();
+            console.log("win2");
         }
     }
 
     //Diagonals
     if (gameBoard[0][0] && gameBoard[1][1] && gameBoard[2][2]){
-        console.log("player1 wins");
-    }else if ((gameBoard[0][0] == 0) && (gameBoard[1][1] == 0) && (gameBoard[2][i] == 0)){
-        console.log("player2 wins");
+        clearBoard();
+        //console.log("win");
+    }else if ((gameBoard[0][0] == 0) && (gameBoard[1][1] == 0) && (gameBoard[2][2] == 0)){
+        clearBoard();
+        console.log("win2");
     }else if (gameBoard[0][2] && gameBoard[1][1] && gameBoard[2][0]){
-        console.log("player1 wins");
+        clearBoard();
+        //console.log("win");
     }else if ((gameBoard[0][2] == 0) && (gameBoard[1][1] == 0) && (gameBoard[2][0] == 0)){
-        console.log("player2 wins");
+        clearBoard();
+        console.log("win2");
     }
+}
+
+function clearBoard(){
+    document.getElementById("box1").innerHTML = "";
+    document.getElementById("box2").innerHTML = "";
+    document.getElementById("box3").innerHTML = "";
+    document.getElementById("box4").innerHTML = "";
+    document.getElementById("box5").innerHTML = "";
+    document.getElementById("box6").innerHTML = "";
+    document.getElementById("box7").innerHTML = "";
+    document.getElementById("box8").innerHTML = "";
+    document.getElementById("box9").innerHTML = "";
 }
