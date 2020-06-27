@@ -9,15 +9,19 @@ let gameBoard = [
 ];
 
 function draw(box){
-    if (player1){
-        document.getElementById(box).innerHTML = "X";
+    let boxSelect = document.getElementById(box);
+    if (boxSelect.innerHTML.length > 0){
+        console.log("Move already played");
+    }
+    else if (player1){
+        boxSelect.innerHTML = "X";
         gamePlay(box);
         win();
         player1 = false;
         player2 = true;
         
     }else if(player2){
-        document.getElementById(box).innerHTML = "O";
+        boxSelect.innerHTML = "O";
         gamePlay(box);
         win();
         player1 = true;
